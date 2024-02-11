@@ -27,8 +27,6 @@ $(document).ready(function () {
     $(resultSelector).text(Object.values(checkedItems).join(', '));
   }
 
-  // Rest of your code for API status check, initial data load, and search button click handling...
-
   // use localhost for testing if not working because of CORS otherwise use 0.0.0.0
   $.get('http://localhost:5001/api/v1/status/', function (data, textStatus) {
     if (textStatus === 'success') {
