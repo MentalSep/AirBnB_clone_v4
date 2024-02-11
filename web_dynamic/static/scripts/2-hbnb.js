@@ -8,7 +8,7 @@ $(document).ready(function () {
     }
     $('div.amenities h4').text(Object.values(checkedAmenities).join(', '));
   });
-  // use localhost for testing if not working because of CORS
+  // use localhost for testing if not working because of CORS otherwise use 0.0.0.0
   $.get('http://0.0.0.0:5001/api/v1/status/', function (data, textStatus) {
     if (textStatus === 'success') {
       if (data.status === 'OK') {
